@@ -1,0 +1,98 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	background-color: #f0f2f5;
+}
+
+.main {
+	flex-grow: 1;
+	display: flex;
+	padding: 3rem;
+	max-width: 1200px;
+	margin: 0 auto;
+	gap: 3rem;
+}
+
+.productImage {
+	width: 50%;
+	max-height: 600px;
+	object-fit: cover;
+	border-radius: 10px;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.productInfo {
+	width: 50%;
+	padding: 2rem;
+	background-color: white;
+	border-radius: 10px;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.productInfo h1 {
+	font-size: 2.5rem;
+	color: #2c3e50;
+	margin-bottom: 1rem;
+}
+
+.price {
+	font-size: 2rem;
+	font-weight: bold;
+	color: #e74c3c;
+	margin: 1rem 0;
+}
+
+.description {
+	font-size: 1.1rem;
+	line-height: 1.6;
+	color: #34495e;
+	margin-bottom: 1.5rem;
+}
+
+.stock {
+	font-size: 1.1rem;
+	color: #2ecc71;
+	margin-bottom: 1.5rem;
+}
+
+.addToCart {
+	background-color: #3498db;
+	color: white;
+	border: none;
+	padding: 1rem 2rem;
+	font-size: 1.2rem;
+	cursor: pointer;
+	border-radius: 5px;
+	transition: background-color 0.3s ease;
+}
+
+.addToCart:hover {
+	background-color: #2980b9;
+}
+
+.addToCart:disabled {
+	background-color: #bdc3c7;
+	cursor: not-allowed;
+}
+
+.soldOut {
+	background-color: #e74c3c;
+	color: white;
+	padding: 0.5rem 1rem;
+	border-radius: 5px;
+	font-size: 1.2rem;
+	display: inline-block;
+}
+
+@media (max-width: 768px) {
+	.main {
+		flex-direction: column;
+		padding: 1.5rem;
+	}
+
+	.productImage,
+	.productInfo {
+		width: 100%;
+	}
+}
